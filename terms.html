@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Publisher Terms</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --ink: #1c1b18;
+    --ink-muted: #5b584d;
+    --accent: #2b5d63;
+    --accent-soft: #e3ece9;
+    --rule: #e2ddd0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15171a;
+      --surface: #1c1f22;
+      --ink: #ece9e1;
+      --ink-muted: #a29d90;
+      --accent: #7fc2c8;
+      --accent-soft: #22302f;
+      --rule: #2a2d2f;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #15171a;
+    --surface: #1c1f22;
+    --ink: #ece9e1;
+    --ink-muted: #a29d90;
+    --accent: #7fc2c8;
+    --accent-soft: #22302f;
+    --rule: #2a2d2f;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  .doc-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    margin: 8px 0 4px;
+    text-wrap: balance;
+  }
+
+  .meta {
+    color: var(--ink-muted);
+    font-size: 14px;
+    margin: 0 0 40px;
+  }
+
+  .lede {
+    font-size: 1.05rem;
+    color: var(--ink);
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    padding: 16px 20px;
+    border-radius: 4px;
+    margin-bottom: 48px;
+  }
+
+  section {
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    margin-top: 32px;
+  }
+
+  section:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+
+  .section-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-muted);
+    letter-spacing: 0.06em;
+  }
+
+  h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 4px 0 12px;
+  }
+
+  p { margin: 0 0 14px; max-width: 62ch; }
+  ul { margin: 0 0 14px; padding-left: 22px; max-width: 62ch; }
+  li { margin-bottom: 8px; }
+
+  code {
+    font-family: ui-monospace, 'SFMono-Regular', Consolas, monospace;
+    background: var(--accent-soft);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: var(--ink);
+  }
+
+  .contact {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-muted);
+    font-size: 14px;
+  }
+
+  .contact a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="doc-label">Terms of Service</div>
+  <h1>Social Publisher</h1>
+  <p class="meta">Effective 22 September 2026 · Personal-use automation tool</p>
+
+  <div class="lede">
+    Social Publisher is a personal automation tool, built and operated by a single individual,
+    that schedules and publishes short-form video the operator made or holds rights to, to the
+    operator's own YouTube, TikTok, and Instagram accounts. It is not a public service and does
+    not accept other users.
+  </div>
+
+  <section>
+    <div class="section-num">01</div>
+    <h2>What this tool does</h2>
+    <p>
+      Social Publisher reads a local queue of video files and metadata, then calls each
+      platform's official API to publish that video to the operator's own connected account
+      on a schedule the operator sets.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-num">02</div>
+    <h2>Single-operator scope</h2>
+    <p>
+      The tool connects to exactly one TikTok account: the operator's own. It is not
+      distributed to, or used by, any other person. There is no multi-tenant mode, no
+      account-switching, and no mechanism for a third party to direct what it publishes.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-num">03</div>
+    <h2>Content responsibility</h2>
+    <p>The operator is solely responsible for:</p>
+    <ul>
+      <li>Only publishing content they created or hold a license to use</li>
+      <li>Disclosing paid promotion where required (for example, TikTok's branded-content tools)</li>
+      <li>Complying with TikTok's Community Guidelines and Terms of Service on every upload</li>
+      <li>Complying with applicable law in the jurisdictions the content reaches</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-num">04</div>
+    <h2>No circumvention</h2>
+    <p>
+      This tool does not attempt to bypass TikTok's rate limits, audit requirements, or
+      publishing restrictions. Where TikTok requires app review before a capability
+      (such as public Direct Post) is available, the tool defaults to a review-friendly
+      path — placing videos in the operator's TikTok inbox for a manual, in-app publish —
+      until that review is complete.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-num">05</div>
+    <h2>Termination</h2>
+    <p>
+      The operator may stop using this tool, or revoke its TikTok access, at any time from
+      TikTok's app permissions settings. TikTok may also suspend API access for the app
+      in accordance with its own developer terms.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-num">06</div>
+    <h2>No warranty</h2>
+    <p>
+      This tool is provided as-is, for the operator's own personal use, with no warranty
+      of any kind. The operator assumes full responsibility for content published through it.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-num">07</div>
+    <h2>Changes to these terms</h2>
+    <p>
+      If these terms change, this page will be updated and the effective date above will
+      change accordingly.
+    </p>
+  </section>
+
+  <div class="contact">
+    Questions about these terms: <a href="mailto:kamal0wamal@gmail.com">kamal0wamal@gmail.com</a>
+  </div>
+</div>
+
+</body>
+</html>

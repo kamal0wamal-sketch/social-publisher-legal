@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Publisher Privacy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --ink: #1c1b18;
+    --ink-muted: #5b584d;
+    --accent: #2b5d63;
+    --accent-soft: #e3ece9;
+    --rule: #e2ddd0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15171a;
+      --surface: #1c1f22;
+      --ink: #ece9e1;
+      --ink-muted: #a29d90;
+      --accent: #7fc2c8;
+      --accent-soft: #22302f;
+      --rule: #2a2d2f;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #15171a;
+    --surface: #1c1f22;
+    --ink: #ece9e1;
+    --ink-muted: #a29d90;
+    --accent: #7fc2c8;
+    --accent-soft: #22302f;
+    --rule: #2a2d2f;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  .doc-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    margin: 8px 0 4px;
+    text-wrap: balance;
+  }
+
+  .meta {
+    color: var(--ink-muted);
+    font-size: 14px;
+    margin: 0 0 40px;
+  }
+
+  .lede {
+    font-size: 1.05rem;
+    color: var(--ink);
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    padding: 16px 20px;
+    border-radius: 4px;
+    margin-bottom: 48px;
+  }
+
+  section {
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    margin-top: 32px;
+  }
+
+  section:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+
+  .section-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-muted);
+    letter-spacing: 0.06em;
+  }
+
+  h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 4px 0 12px;
+  }
+
+  p { margin: 0 0 14px; max-width: 62ch; }
+  ul { margin: 0 0 14px; padding-left: 22px; max-width: 62ch; }
+  li { margin-bottom: 8px; }
+
+  code {
+    font-family: ui-monospace, 'SFMono-Regular', Consolas, monospace;
+    background: var(--accent-soft);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: var(--ink);
+  }
+
+  .contact {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-muted);
+    font-size: 14px;
+  }
+
+  .contact a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="doc-label">Privacy Policy</div>
+  <h1>Social Publisher</h1>
+  <p class="meta">Effective 22 September 2026 · Personal-use automation tool</p>
+
+  <div class="lede">
+    Social Publisher is a personal tool built and operated by a single individual to schedule
+    and publish their own short-form videos to their own YouTube, TikTok, and Instagram accounts.
+    It is not offered as a service to other users, and it does not collect data from anyone
+    other than its own operator.
+  </div>
+
+  <section>
+    <div class="section-num">01</div>
+    <h2>Who this covers</h2>
+    <p>
+      This policy describes how Social Publisher handles data for its sole operator — the
+      person who installed it and connected their own social accounts. There are no other
+      end users; the tool runs on the operator's own computer and is not distributed publicly.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-num">02</div>
+    <h2>What it accesses on TikTok</h2>
+    <p>Through TikTok's OAuth flow, the tool requests only the scopes it needs to publish video content to the operator's own account:</p>
+    <ul>
+      <li><code>user.info.basic</code> — to confirm which account is connected</li>
+      <li><code>video.upload</code> and <code>video.publish</code> — to upload a video file and post it (or place it in the operator's TikTok inbox for manual review)</li>
+    </ul>
+    <p>The tool never reads, follows, messages, or acts on any account other than the one the operator explicitly connects.</p>
+  </section>
+
+  <section>
+    <div class="section-num">03</div>
+    <h2>Where data lives</h2>
+    <p>
+      OAuth access and refresh tokens are stored in a local file on the operator's own machine.
+      They are never transmitted to a third-party server, never sold, and never shared —
+      the only two parties in this exchange are the operator's device and TikTok's own API.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-num">04</div>
+    <h2>What it does not do</h2>
+    <ul>
+      <li>No analytics, tracking pixels, or advertising identifiers</li>
+      <li>No data collected from viewers of the published videos</li>
+      <li>No data broker relationships of any kind</li>
+      <li>No account access beyond the single account the operator connects</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-num">05</div>
+    <h2>Revoking access</h2>
+    <p>
+      The operator can revoke Social Publisher's access at any time from TikTok's app
+      permissions settings, or by deleting the local token file. Either action immediately
+      stops the tool from publishing further content.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-num">06</div>
+    <h2>Changes to this policy</h2>
+    <p>
+      If this tool's data handling changes, this page will be updated and the effective
+      date above will change accordingly.
+    </p>
+  </section>
+
+  <div class="contact">
+    Questions about this policy: <a href="mailto:kamal0wamal@gmail.com">kamal0wamal@gmail.com</a>
+  </div>
+</div>
+
+</body>
+</html>
